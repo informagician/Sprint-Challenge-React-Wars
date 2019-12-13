@@ -41,7 +41,8 @@ const App = () => {
           return <Card key={item.name} name={item.name} height={item.height} />;
         })}
       </Container>
-      <Button name={'Next Page'} onClick={() => setPage(page++)}/>
+      <Button name={'Previous Page'} click={() => setPage(--page)} disabled={(page === 1) ? true : false}/>
+      <Button name={'Next Page'} click={() => setPage(++page)}/>
     </div>
   );
 }
