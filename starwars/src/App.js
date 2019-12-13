@@ -1,7 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Card from './components/card'
+import Card from './components/card';
+import styled from "styled-components";
 const axios = require('axios');
+
+const Container = styled.div`
+  width: 960px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
 
 const App = () => {
   let [people, setPeople] = useState([]);
@@ -22,15 +31,15 @@ const App = () => {
     .catch(error => {
       console.log('RoB0t 8rOk3N!', error);
     })
-  }, [])
+  }, [page])
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div className="container">
+      <Container>
         {people.map(item => {
-          return <Card key={item} name={item.name} height={item.height} />;
+          return <Card key={item.name} name={item.name} height={item.height} />;
         })}
-      </div>
+      </Container>
     </div>
   );
 }
