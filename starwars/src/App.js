@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Card from './components/card';
-import styled from "styled-components";
+import Button from './components/button';
+import styled from 'styled-components';
 const axios = require('axios');
 
 const Container = styled.div`
@@ -14,7 +15,7 @@ const Container = styled.div`
 
 const App = () => {
   let [people, setPeople] = useState([]);
-  let [page] = useState(1);
+  let [page, setPage] = useState(1);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -40,6 +41,7 @@ const App = () => {
           return <Card key={item.name} name={item.name} height={item.height} />;
         })}
       </Container>
+      <Button name={'Next Page'} onClick={() => setPage(page++)}/>
     </div>
   );
 }

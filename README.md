@@ -26,13 +26,33 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a user component library built by facebook to deal with state management complexities in appliation development.
+React is a frontend library meaning its sole purpose is to render UI.
+React sees pieces of application as components, and it leverages this design for scalablity and reusability.
+React interacts with DOM using a virtualDOM.
+React uses JSX, an XML like structure to represent HTML markup.
+
 - [ ] What does it mean to _think_ in react?
+
+ to think about the app in a scalable, reusable and compartmentalized pieces as we build them.
+ start with a mock
+ break the UI into a component hierarchy
+ build a static version in react
+ identify the representation of UI state
+ identify where the state should live
+ add the dataflow
 
 - [ ] Describe state.
 
+ state is possible change in data. once the state changes, if captured, component will rerender.
+
 - [ ] Describe props.
 
+ short for properties, they are set of values in a data structure usually an object to be passed down to components.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+ Side effects are any happening out of their own scope.
 
 ## Project Set Up
 
